@@ -1,0 +1,15 @@
+C:\Users\pc\source\repos\CurrencyConverter\BOL\bin\Debug\net5.0\BOL.deps.json
+C:\Users\pc\source\repos\CurrencyConverter\BOL\bin\Debug\net5.0\BOL.dll
+C:\Users\pc\source\repos\CurrencyConverter\BOL\bin\Debug\net5.0\ref\BOL.dll
+C:\Users\pc\source\repos\CurrencyConverter\BOL\bin\Debug\net5.0\BOL.pdb
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.AssemblyInfoInputs.cache
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.AssemblyInfo.cs
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.dll
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\ref\BOL.dll
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.pdb
+C:\Users\pc\source\repos\CurrencyConverter\BOL\bin\Debug\net5.0\BLL.dll
+C:\Users\pc\source\repos\CurrencyConverter\BOL\bin\Debug\net5.0\BLL.pdb
+C:\Users\pc\source\repos\CurrencyConverter\BOL\obj\Debug\net5.0\BOL.csproj.CopyComplete
