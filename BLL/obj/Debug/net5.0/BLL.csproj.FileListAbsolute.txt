@@ -33,3 +33,4 @@ C:\Users\pc\Desktop\Myproject\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.
 C:\Users\pc\Desktop\Myproject\BLL\obj\Debug\net5.0\BLL.dll
 C:\Users\pc\Desktop\Myproject\BLL\obj\Debug\net5.0\ref\BLL.dll
 C:\Users\pc\Desktop\Myproject\BLL\obj\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\Myproject\BLL\obj\Debug\net5.0\BLL.csprojAssemblyReference.cache

@@ -10,7 +10,7 @@ namespace BLL.Dtos
     {
         public int FromCurrency { get; set; }
         public int ToCurrency { get; set; }
-        public double Value { get; set; }
+        public decimal Value { get; set; }
         
     }
 }
