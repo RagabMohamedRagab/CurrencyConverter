@@ -22,7 +22,7 @@ namespace DAL.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-R34I8VP;Database=CurrencyAPI;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-R34I8VP;Database=CurrencyAPI;Trusted_Connection=True;", b => b.MigrationsAssembly("DAL"));
          
         }
         protected override void OnModelCreating(ModelBuilder builder)
@@ -41,13 +41,16 @@ namespace DAL.Models
             builder.Entity<LoginDto>().HasNoKey();
             builder.Ignore<RegisterDTO>();
             builder.Ignore<LoginDto>();
-            builder.Entity<Currency>().HasKey(Pk => Pk.Id);
+            builder.Entity<Currency>().HasKey(Pk => Pk.Id);  
             builder.Entity<Currency>().Property(currency => currency.Id).ValueGeneratedOnAdd();
             builder.Entity<Currency>().Property(currency => currency.Name).HasMaxLength(120);  
             builder.Entity<Currency>().Property(currency => currency.Sign).HasMaxLength(3);
             builder.Entity<Currency>().Property(currency => currency.IsActive).HasDefaultValue(1);
             builder.Entity<ExchangeHistory>().HasKey(Pk => Pk.ID);
-            builder.Entity<ExchangeHistory>().Property(p => p.ID).ValueGeneratedOnAdd();
+            builder.Entity<ExchangeHistory>().Property(p => p.ID).ValueGeneratedOnAdd();builder.Entity<CurrencyExchangeValueDto>().HasNoKey();
+            builder.Entity<CurrencyExchangeValueDto>().Property(currency => currency.Sign).HasMaxLength(3);
+            builder.Ignore<CurrencyExchangeValueDto>();
+
         }
 
 

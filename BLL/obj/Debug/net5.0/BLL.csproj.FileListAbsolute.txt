@@ -10,3 +10,15 @@ C:\Users\pc\source\repos\CurrencyConverter\BLL\obj\Debug\net5.0\BLL.dll
 C:\Users\pc\source\repos\CurrencyConverter\BLL\obj\Debug\net5.0\ref\BLL.dll
 C:\Users\pc\source\repos\CurrencyConverter\BLL\obj\Debug\net5.0\BLL.pdb
 C:\Users\pc\source\repos\CurrencyConverter\BLL\obj\Debug\net5.0\BLL.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\API\BLL\bin\Debug\net5.0\BLL.deps.json
+C:\Users\pc\Desktop\API\BLL\bin\Debug\net5.0\BLL.dll
+C:\Users\pc\Desktop\API\BLL\bin\Debug\net5.0\ref\BLL.dll
+C:\Users\pc\Desktop\API\BLL\bin\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.dll
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\ref\BLL.dll
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\API\BLL\obj\Debug\net5.0\BLL.csprojAssemblyReference.cache

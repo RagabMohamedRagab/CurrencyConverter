@@ -14,6 +14,7 @@ namespace BLL.Mapper
         public MapperProfile()
         {
             CreateMap<CurrencyDto, Currency>().ReverseMap();
+            CreateMap<CurrencyExchangebyRateDto, ExchangeHistory>().ReverseMap();
         }
     }
 }

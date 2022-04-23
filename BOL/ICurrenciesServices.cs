@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Dtos;
+using BLL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +8,24 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-    public interface ICurrenciesServices<T> where T : class
+    public interface ICurrenciesServices
     {
-        Task<IEnumerable<T>> GetAllAsync();
-        Task<T> GetByNameAsync(string Name);
-        Task<int> CreateAsync(T currency);
-        Task<T> EditAsync(int Id, T currency);
-        Task<int> DeleteAsync(T currency);
+        Task<IEnumerable<CurrencyExchangebyRateDto>> GetAllAsync();
+        Task<CurrencyExchangebyRateDto> GetByNameAsync(string Name);
+       
+        Task<int> CreateAsync(CurrencyExchangeValueDto currencyExchange);
+        Task<ExchangeHistory> EditAsync(int Id, CurrencyExchangeValueDto currencyExchangeHistoryDto);
+        Task<int> DeleteAsync(string Name);
 
+      IEnumerable<CurrencyExchangebyRateDto> GetHighest(int Num);
+      IEnumerable<CurrencyExchangebyRateDto> GetLowest(int Num);
+      IEnumerable<CurrencyExchangebyRateDto> GetMostNImprovedCurrencies(DateTime from,DateTime to, int Num);
     }
 }
+
+
+
+
+
 
 

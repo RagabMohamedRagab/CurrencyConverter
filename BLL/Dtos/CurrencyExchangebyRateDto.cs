@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL.Dtos
 {
-   public class ExchangeHistoryDto
+   public class CurrencyExchangebyRateDto
     {
-        [DataType(DataType.DateTime)]
-        public DateTime ExchangeDate { get; set; }
+        public string Name { get; set; }
+        public string Sign { get; set; }
         public double Rate { get; set; }
     }
 }

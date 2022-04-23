@@ -32,17 +32,20 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CurrencyDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CurrencyConnection")));
+            services.AddDbContext<CurrencyDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("CurrencyConnection"), b => b.MigrationsAssembly("DAL")));
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<CurrencyDbContext>();
             services.AddTransient<IRegisterAndLoginServices, RegisterAndLogin>();
-            services.AddTransient<ICurrenciesServices<CurrencyDto>, CurrenciesManager>();
+            services.AddTransient<ICurrenciesServices, CurrenciesManager>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CurrencyConverter", Version = "v1", Description = "Task Of Algoriza" });
             });
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddControllers().AddNewtonsoftJson(options =>
+     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
+
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

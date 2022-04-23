@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(CurrencyDbContext))]
-    [Migration("20220420192925_AddingCurrencyTableAndExChangeHistoryTable")]
-    partial class AddingCurrencyTableAndExChangeHistoryTable
+    [Migration("20220422194118_ChangeDataTypes")]
+    partial class ChangeDataTypes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,7 +29,9 @@ namespace DAL.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<string>("Name")
                         .HasMaxLength(120)
@@ -51,18 +53,18 @@ namespace DAL.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CurrencyId")
+                    b.Property<int?>("CurID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ExchangeDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Rate")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(4,2)");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("CurrencyId");
+                    b.HasIndex("CurID");
 
                     b.ToTable("ExchangeHistories");
                 });
@@ -267,7 +269,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("BLL.Models.Currency", "Currency")
                         .WithMany("ExchangeHistories")
-                        .HasForeignKey("CurrencyId");
+                        .HasForeignKey("CurID");
 
                     b.Navigation("Currency");
                 });
