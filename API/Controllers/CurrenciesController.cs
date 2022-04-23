@@ -44,11 +44,11 @@ namespace API.Controllers
         }
         // api/Currencies/DeleteCurrency
         [HttpDelete("DeleteCurrency")]
-        public IActionResult DeleteCurrency(string Name)
+        public IActionResult DeleteCurrency(int Id)
         {
-            if (Name != null)
+            if (Id != 0) 
             {
-                if (_currencies.DeleteAsync(Name).Result > 0)
+                if (_currencies.DeleteAsync(Id).Result > 0)
 
                     return Ok("Done.");
             }
@@ -106,16 +106,18 @@ namespace API.Controllers
             }
             return NotFound("Falied Your Request..!! Try again to enter Another Number.");
         }
-        // api/Currencies/GetLowestNCurrencies
-        [HttpGet("GetMostNImprovedCurrenciesByDate")]
-        public IActionResult GetMostNImprovedCurrenciesByDate(DateTime from , DateTime to , int Number)
+        
+        [HttpGet("ConvertAmount")]
+        public IActionResult ConvertAmount([FromQuery]ConverterDto converterDto)
         {
-            var GetMostNImproved = _currencies.GetMostNImprovedCurrencies(from, to, Number);
-            if (GetMostNImproved != null)
-                return Ok(GetMostNImproved);
-            return NotFound("Try Aagin To Insert Another Date Or Correct Form...");
+            if (converterDto != null)
+            {
+                var GetAmount = _currencies.ConvertAmountAsync(converterDto).Result;
+                if (GetAmount != null)
+                    return Ok($"your value : {GetAmount}");
+            }
+            return NotFound("Falied Your Request..!! Try Again with Another ConvertAmount ");
         }
-
 
 
     }

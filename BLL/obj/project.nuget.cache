@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S8REYHifyj4XwHWQ2owrv1kTpd+tGLzmaBCNHTGzUpnQXOrjWbZpCC8wlZh6NMpBL7/XR+wb17HUeSlt6irjPg==",
+  "dgSpecHash": "AHKXwSylUpdLrq2mQIRVEcnpGsVuwVRe1Q/J8ZCNAYg1odoxCmg+rjdP/Ido6CBAfUr3mZRnocSQy5P0wOxzZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\API\\BLL\\BLL.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

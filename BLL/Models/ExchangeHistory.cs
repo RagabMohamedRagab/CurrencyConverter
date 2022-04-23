@@ -14,7 +14,7 @@ namespace BLL.Models
         [DataType(DataType.DateTime)]
         public DateTime ExchangeDate { get; set; } = DateTime.Now;
         [Column(TypeName ="decimal(4,2)")]
-        public double Rate { get; set; }
+        public decimal Rate { get; set; }
         [ForeignKey("Currency")]
         public int? CurID { get; set; }
         public virtual Currency Currency{ get; set; }

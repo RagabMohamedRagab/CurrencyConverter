@@ -10,6 +10,6 @@ namespace BLL.Dtos
     {
         public string Name { get; set; }
         public string Sign { get; set; }
-        public double Value { get; set; }
+        public decimal Value { get; set; }
     }
 }

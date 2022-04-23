@@ -55,7 +55,7 @@ namespace DAL.Repositories
                     Name = get_coin.Name,
                     Sign = get_coin.Sign,
                     Rate = get_coin.ExchangeHistories
-                            .OrderBy(rate => rate.Rate).LastOrDefault().Rate
+                            .OrderBy(rate => rate.ExchangeDate).LastOrDefault().Rate
                 };
             }
             return null;
@@ -89,17 +89,16 @@ namespace DAL.Repositories
             return 0;
         }
 
-        public async Task<int> DeleteAsync(string Name)
+        public async Task<int> DeleteAsync(int Id)
         {
-            if (Name != null)
-            {
-                var coin = await _currency.Currencies.SingleOrDefaultAsync(coin => coin.Name.ToLower() == Name.ToLower());
+
+            var coin = await _currency.Currencies.FindAsync(Id);
                 if (coin != null)
                 {
                     coin.IsActive = false;
                     return await _currency.SaveChangesAsync();
                 }
-            }
+          
             return 0;
         }
 
@@ -145,26 +144,30 @@ namespace DAL.Repositories
             return null;
         }
 
-        public IEnumerable<CurrencyExchangebyRateDto> GetMostNImprovedCurrencies(DateTime from, DateTime to, int Num)
+        public async Task<string> ConvertAmountAsync(ConverterDto converter)
         {
-            //  Test Date 
-            //var IsSelected = _currency.ExchangeHistories.ToList().GroupBy(CurId => CurId.CurID).Any(date => date.FirstOrDefault().ExchangeDate >= from && date.LastOrDefault().ExchangeDate <= to);
-            // Test Date
-            //if (IsSelected)
-            //{
-                IEnumerable<IEnumerable<ExchangeHistory>> CurrenicesFromTo = _currency.Currencies.Select(related => related.ExchangeHistories).Where(exchange => exchange.OrderBy(date => date.ExchangeDate).Any(Dateofrate => Dateofrate.ExchangeDate == from || Dateofrate.ExchangeDate == to));
-                var val = CurrenicesFromTo.Where(b => b.FirstOrDefault().Rate - b.LastOrDefault().Rate > 0).Select(obj => obj.FirstOrDefault());
-            return val.Select(currency => new CurrencyExchangebyRateDto
+
+            var first_rate = GetLastRate(converter.FromCurrency);
+            var second_rate = GetLastRate(converter.ToCurrency);
+            var sign_coin = await _currency.Currencies.FindAsync(converter.ToCurrency);
+            if (first_rate != 0 && second_rate != 0)
             {
-                Name = currency.Currency.Name,
-                Sign = currency.Currency.Sign,
-                Rate = currency.Rate
-            }).Take(Num) ?? null;
-           
-
+                var ratio_currency = (converter.Value / first_rate);
+                return $"{ratio_currency * second_rate} {sign_coin.Sign}";
+            }
+            return null;
         }
-
+        public decimal GetLastRate(int Id)
+        {
+            var rate = _currency.Currencies.Where(valid => valid.IsActive).SingleOrDefault(coin => coin.Id == Id).ExchangeHistories.OrderBy(date => date.ExchangeDate).LastOrDefault().Rate;
+            return rate;
+        }
     }
+
+
+
+
+
 
 
 
