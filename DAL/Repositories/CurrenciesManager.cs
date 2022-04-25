@@ -17,11 +17,9 @@ namespace DAL.Repositories
     {
 
         private readonly CurrencyDbContext _currency;
-        private readonly IMapper _mapper;
-        public CurrenciesManager(CurrencyDbContext currency, IMapper mapper)
+        public CurrenciesManager(CurrencyDbContext currency)
         {
             _currency = currency;
-            _mapper = mapper;
         }
         public async Task<IEnumerable<CurrencyExchangebyRateDto>> GetAllAsync()
         {
@@ -121,9 +119,8 @@ namespace DAL.Repositories
             catch (Exception)
             {
                 return null;
-                throw;
             }
-
+        
         }
 
         public IEnumerable<CurrencyExchangebyRateDto> GetHighest(int Num)
@@ -171,40 +168,60 @@ namespace DAL.Repositories
             var all_Dates = currenies.SelectMany(coin => coin.ExchangeHistories).OrderBy(date => date.ExchangeDate).Select(date => date.ExchangeDate.Date).ToList();
             return all_Dates;
         }
-    //    public IList<ExchangeHistory> GetCurrency(int CurId,DateTime from,DateTime to)
-    //    {
-    //        var adat = GetAllCurrenices().SingleOrDefault(currency => currency.Id == CurId).ExchangeHistories.Where(date=>date.ExchangeDate.Date==from.Date).OrderBy(date => date.ExchangeDate).LastOrDefault();
-    //        var ad3at = GetAllCurrenices().SingleOrDefault(currency => currency.Id == CurId).ExchangeHistories.Where(date => date.ExchangeDate.Date == to.Date).OrderBy(date => date.ExchangeDate).LastOrDefault();
-    //        if()
-    //    }
-    //    public IEnumerable<CurrencyExchangebyRateDto> GetMostNImproved(ChangeOfRateDto changeOfRate)
-    //    {
+        public bool IsContains(DateTime Satrt, DateTime End)
+        {
+            var all_Currenies = GetAllCurrenices();
+            if (GetAllDates(all_Currenies).Contains(Satrt.Date) && GetAllDates(all_Currenies).Contains(End.Date))
+                return true;
+            return false;
+        }
 
-    //        //var get_all_dates = GetAllDates(GetAllCurrenices());
-    //        //if (get_all_dates.Contains(changeOfRate.From.Date) && get_all_dates.Contains(changeOfRate.To.Date))
-    //        //{
-    //        //    var get_all_Currenies = GetAllCurrenices().Select(currenies => new CurrencyExchangebyRateDto 
-    //        //    {
-    //        //     Name=currenies.Name,
-    //        //     Sign=currenies.Sign,
-    //        //     Rate=GetCurrency(currenies.Id,changeOfRate.From,changeOfRate.To)
-                
-    //        //    });
-
-    //        //}
-
-    //        //return null;
-    //    }
-    //}
+        public IEnumerable<CurrencyDto> GetMostNImprovedAndLowest(ChangeOfRateDto changeOfRate, string order)
+        {
+            if (IsContains(changeOfRate.From, changeOfRate.To))
+            {
+                IEnumerable<CurrencyExchangebyRateDto> get_all_currenies = GetAllCurrenices().Select(coin => new CurrencyExchangebyRateDto
+                {
+                    Name = coin.Name,
+                    Sign = coin.Sign,
+                    Rate = GetRate(coin.Id, changeOfRate.From.Date, changeOfRate.To.Date)
 
 
+                });
+                IEnumerable<CurrencyExchangebyRateDto> arrange_Currenies = get_all_currenies;
+                IEnumerable<CurrencyDto> currencies;
+                if (order == "Desc")
+                {
+                    currencies = arrange_Currenies.Where(rate => rate.Rate < 0).Select(currency => new CurrencyDto() { Name = currency.Name, Sign = currency.Sign });
+                }
+                else
+                {
+                    currencies = arrange_Currenies.Where(rate => rate.Rate > 0).Select(currency => new CurrencyDto() { Name = currency.Name, Sign = currency.Sign });
+                }
+                if (currencies.Count() > changeOfRate.Number)
+                    return currencies.Take(changeOfRate.Number);
+            }
+            return null;
+        }
 
 
+        public decimal GetRate(int CurId, DateTime start, DateTime end)
+        {
+            var your_Currency = GetAllCurrenices().SingleOrDefault(currrency => currrency.Id == CurId);
+            decimal FinalRate = 0;
+            if (your_Currency != null)
+            {
+                var start_date_Of_Rate = your_Currency.ExchangeHistories.OrderBy(date => date.ExchangeDate).LastOrDefault(date => date.ExchangeDate.Date == start.Date);
+                var end_date_Of_Rate = your_Currency.ExchangeHistories.OrderBy(date => date.ExchangeDate).LastOrDefault(date => date.ExchangeDate.Date == end.Date);
+                if (start_date_Of_Rate != null && end_date_Of_Rate != null)
+                {
+                    FinalRate = start_date_Of_Rate.Rate - end_date_Of_Rate.Rate;
+                }
+            }
+            return FinalRate;
+        }
 
-
-
-
-
+    }
 }
 
 
@@ -233,10 +250,9 @@ namespace DAL.Repositories
 
 
 
-/*
- * .GroupBy(i => i.CurID).Select(Ex => Ex.OrderBy(data => data.ExchangeDate).LastOrDefault()).Reverse().ToListAsync();
- * .Select(ex => ex.ExchangeHistories.OrderBy(b => b.ExchangeDate).LastOrDefault()).AsEnumerable().Reverse();
- * */
+
+
+
 
 
 

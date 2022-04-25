@@ -19,7 +19,7 @@ namespace BOL
 
       IEnumerable<CurrencyExchangebyRateDto> GetHighest(int Num);
       IEnumerable<CurrencyExchangebyRateDto> GetLowest(int Num);
-        IEnumerable<CurrencyExchangebyRateDto> GetMostNImproved(ChangeOfRateDto changeOfRate);
+        IEnumerable<CurrencyDto> GetMostNImprovedAndLowest(ChangeOfRateDto changeOfRate,string order);
        Task<string> ConvertAmountAsync(ConverterDto converter);
     }
 }

@@ -23,8 +23,7 @@ namespace DAL.Repositories
         #region
         public async Task<int> CreateAsync(RegisterDTO register)
         {
-            if (register != null)
-            {
+            
                 var admin = new IdentityUser
                 {
 
@@ -39,7 +38,7 @@ namespace DAL.Repositories
                     await _signIn.SignInAsync(admin, isPersistent: false);
                     return 1;
                 }
-            }
+            
             return 0;
         }
         #endregion

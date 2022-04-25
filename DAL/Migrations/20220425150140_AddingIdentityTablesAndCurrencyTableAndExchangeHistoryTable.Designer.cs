@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(CurrencyDbContext))]
-    [Migration("20220423173313_Change")]
-    partial class Change
+    [Migration("20220425150140_AddingIdentityTablesAndCurrencyTableAndExchangeHistoryTable")]
+    partial class AddingIdentityTablesAndCurrencyTableAndExchangeHistoryTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

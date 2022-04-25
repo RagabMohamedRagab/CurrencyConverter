@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DAL.Migrations
 {
-    public partial class AddingIdenityTableAndCurrenyAndExchangeHistory : Migration
+    public partial class AddingIdentityTablesAndCurrencyTableAndExchangeHistoryTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -174,7 +174,7 @@ namespace DAL.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ExchangeDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Rate = table.Column<decimal>(type: "money", nullable: false),
+                    Rate = table.Column<decimal>(type: "decimal(4,2)", nullable: false),
                     CurID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

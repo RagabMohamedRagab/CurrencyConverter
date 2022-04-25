@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JGM75Og9fsbZ+fDfKCFfiZkFlArhIyyP38c/r5sJRH/UaWdG9QrRFM5Xlq+RcGy3ZdoWj70QwogN6JSqxgyd9A==",
+  "dgSpecHash": "oz9Oi1p1VzpELlzC/BZOiYLPYsATvm3kMlreY96CKy0EEbSXhdLeOAr5UZcUdH3nRRSTMWH2M4ujGEcdj7Cdag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (3)\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

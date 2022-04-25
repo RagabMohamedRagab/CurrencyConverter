@@ -46,3 +46,15 @@ C:\Users\pc\Desktop\New folder (2)\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileIn
 C:\Users\pc\Desktop\New folder (2)\BLL\obj\Debug\net5.0\BLL.dll
 C:\Users\pc\Desktop\New folder (2)\BLL\obj\Debug\net5.0\ref\BLL.dll
 C:\Users\pc\Desktop\New folder (2)\BLL\obj\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\New folder (3)\BLL\bin\Debug\net5.0\BLL.deps.json
+C:\Users\pc\Desktop\New folder (3)\BLL\bin\Debug\net5.0\BLL.dll
+C:\Users\pc\Desktop\New folder (3)\BLL\bin\Debug\net5.0\ref\BLL.dll
+C:\Users\pc\Desktop\New folder (3)\BLL\bin\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.dll
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\ref\BLL.dll
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\New folder (3)\BLL\obj\Debug\net5.0\BLL.csprojAssemblyReference.cache

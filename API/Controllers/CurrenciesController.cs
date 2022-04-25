@@ -23,7 +23,7 @@ namespace API.Controllers
         [HttpPost("AddCurrency")]
         public IActionResult AddCurrency([FromForm] CurrencyExchangeValueDto dto)
         {
-            if (dto != null)
+            if (ModelState.IsValid)
             {
                 if (_currencies.CreateAsync(dto).Result > 0)
                     return Ok("Congratulations..");
@@ -34,7 +34,8 @@ namespace API.Controllers
         [HttpPatch("UpdateCurrency")]
         public IActionResult UpdateCurrency(int Id, [FromForm] CurrencyExchangeValueDto currencyExchange)
         {
-            if (Id != 0 && currencyExchange != null)
+
+            if (Id != 0 && ModelState.IsValid)
             {
 
                 if (_currencies.EditAsync(Id, currencyExchange).Result != null)
@@ -46,7 +47,7 @@ namespace API.Controllers
         [HttpDelete("DeleteCurrency")]
         public IActionResult DeleteCurrency(int Id)
         {
-            if (Id != 0) 
+            if (Id != 0)
             {
                 if (_currencies.DeleteAsync(Id).Result > 0)
 
@@ -63,7 +64,7 @@ namespace API.Controllers
                 var get_Coin = _currencies.GetByNameAsync(Name).Result;
                 if (get_Coin != null)
                 {
-                    return Ok();
+                    return Ok(get_Coin);
                 }
                 else
                 {
@@ -107,34 +108,55 @@ namespace API.Controllers
             return NotFound("Falied Your Request..!! Try again to enter Another Number.");
         }
         [HttpGet("GetMostNImprovedCurrenciesByDate")]
-        public IActionResult GetMostNImprovedCurrenciesByDate([FromQuery]ChangeOfRateDto rateDto)
+        public IActionResult GetMostNImprovedCurrenciesByDate([FromQuery] ChangeOfRateDto rateDto)
         {
-            if (rateDto != null)
+            if (ModelState.IsValid)
             {
-                var GetMostNImproved = _currencies.GetMostNImproved(rateDto);
+                var GetMostNImproved = _currencies.GetMostNImprovedAndLowest(rateDto, "Desc");
                 if (GetMostNImproved != null)
+                {
                     return Ok(GetMostNImproved);
+                }
+
+                return NotFound("There aren't  Improved Any Currenies");
             }
-            return NotFound("Falied Your Request..!! Try again to enter Another Dates.");
+            return BadRequest("Falied Your Request..!! Try again to enter Another Dates.");
         }
-
-
-
-        [HttpGet("ConvertAmount")]
-        public IActionResult ConvertAmount([FromQuery]ConverterDto converterDto)
+        [HttpGet("GetLeastNImprovedCurrenciesByDate")]
+        public IActionResult GetLeastNImprovedCurrenciesByDate([FromQuery] ChangeOfRateDto rateDto)
         {
-            if (converterDto != null)
+            if (ModelState.IsValid)
+            {
+                var GetMostNImproved = _currencies.GetMostNImprovedAndLowest(rateDto, "ASC");
+                if (GetMostNImproved != null)
+                {
+                    return Ok(GetMostNImproved);
+                }
+
+                return NoContent();
+            }
+            return BadRequest("Falied Your Request..!! Try again to enter Another Dates.");
+        }
+        [HttpGet("ConvertAmount")]
+        public IActionResult ConvertAmount([FromQuery] ConverterDto converterDto)
+        {
+            if (ModelState.IsValid)
             {
                 var GetAmount = _currencies.ConvertAmountAsync(converterDto).Result;
                 if (GetAmount != null)
+                {
                     return Ok($"your value : {GetAmount}");
+                }
+                return NoContent();
             }
-            return NotFound("Falied Your Request..!! Try Again with Another ConvertAmount ");
+            return BadRequest("Falied Your Request..!! Try again .");
         }
 
 
     }
 }
+
+
 
 
 

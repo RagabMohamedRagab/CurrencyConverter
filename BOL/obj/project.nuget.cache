@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eP9kddPVW/1yZRhhi/geeUzgyj2i8K9GYlFH3YkDjFo3otUNoz3SiDapuZzgQeCFIAhTVb0wkgxBshrCS7PhBQ==",
+  "dgSpecHash": "DCs6s1iu4Jr2estMRX+hmLj95TfuoFUn2cZAKOY7BJFzB1lybgrsuV2uBp0s/lyJZrOaqDSkcQDnytZNHdNmBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\BOL.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder (3)\\BOL\\BOL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

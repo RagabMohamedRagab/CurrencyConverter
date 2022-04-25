@@ -23,9 +23,12 @@ namespace API.Controllers
         [HttpPost("Register")]
         public IActionResult Register([FromForm] RegisterDTO dTO)
         {
-            if (_registerAndLogin.CreateAsync(dTO).Result > 0)
+            if (ModelState.IsValid)
             {
-                return Ok("Successfully Register");
+                if (_registerAndLogin.CreateAsync(dTO).Result > 0)
+                {
+                    return Ok("Successfully Register");
+                }
             }
             return NotFound("Falied Register");
         }
@@ -33,9 +36,12 @@ namespace API.Controllers
         [HttpPost("Login")]
         public IActionResult Login([FromForm] LoginDto dto)
         {
-            if (_registerAndLogin.LoginAsync(dto).Result > 0)
+            if (ModelState.IsValid)
             {
-                return Ok("Successfully Login");
+                if (_registerAndLogin.LoginAsync(dto).Result > 0)
+                {
+                    return Ok("Successfully Login");
+                }
             }
             return NotFound("Falied Login");
         }
