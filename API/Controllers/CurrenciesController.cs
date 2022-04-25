@@ -106,7 +106,20 @@ namespace API.Controllers
             }
             return NotFound("Falied Your Request..!! Try again to enter Another Number.");
         }
-        
+        [HttpGet("GetMostNImprovedCurrenciesByDate")]
+        public IActionResult GetMostNImprovedCurrenciesByDate([FromQuery]ChangeOfRateDto rateDto)
+        {
+            if (rateDto != null)
+            {
+                var GetMostNImproved = _currencies.GetMostNImproved(rateDto);
+                if (GetMostNImproved != null)
+                    return Ok(GetMostNImproved);
+            }
+            return NotFound("Falied Your Request..!! Try again to enter Another Dates.");
+        }
+
+
+
         [HttpGet("ConvertAmount")]
         public IActionResult ConvertAmount([FromQuery]ConverterDto converterDto)
         {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\Myproject\\API\\API.csproj": {}
+    "C:\\Users\\pc\\Desktop\\New folder (2)\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\Myproject\\API\\API.csproj": {
+    "C:\\Users\\pc\\Desktop\\New folder (2)\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Myproject\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (2)\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\API\\API.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\API\\API.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\Myproject\\API\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\Myproject\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\DAL\\DAL.csproj"
+              "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\DAL.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj": {
+    "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -157,14 +157,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\Myproject\\BOL\\BOL.csproj": {
+    "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\BOL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Myproject\\BOL\\BOL.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\BOL.csproj",
         "projectName": "BOL",
-        "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\BOL\\BOL.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\BOL.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\Myproject\\BOL\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -185,8 +185,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj"
+              "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj"
               }
             }
           }
@@ -219,14 +219,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\Myproject\\DAL\\DAL.csproj": {
+    "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Myproject\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\Myproject\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -247,11 +247,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\BLL\\BLL.csproj"
+              "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\pc\\Desktop\\Myproject\\BOL\\BOL.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\Myproject\\BOL\\BOL.csproj"
+              "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\BOL.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\New folder (2)\\BOL\\BOL.csproj"
               }
             }
           }

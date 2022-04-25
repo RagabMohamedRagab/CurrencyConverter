@@ -43,3 +43,18 @@ C:\Users\pc\Desktop\Myproject\BOL\obj\Debug\net5.0\BOL.csproj.CopyComplete
 C:\Users\pc\Desktop\Myproject\BOL\obj\Debug\net5.0\BOL.dll
 C:\Users\pc\Desktop\Myproject\BOL\obj\Debug\net5.0\ref\BOL.dll
 C:\Users\pc\Desktop\Myproject\BOL\obj\Debug\net5.0\BOL.pdb
+C:\Users\pc\Desktop\New folder (2)\BOL\bin\Debug\net5.0\BOL.deps.json
+C:\Users\pc\Desktop\New folder (2)\BOL\bin\Debug\net5.0\BOL.dll
+C:\Users\pc\Desktop\New folder (2)\BOL\bin\Debug\net5.0\ref\BOL.dll
+C:\Users\pc\Desktop\New folder (2)\BOL\bin\Debug\net5.0\BOL.pdb
+C:\Users\pc\Desktop\New folder (2)\BOL\bin\Debug\net5.0\BLL.dll
+C:\Users\pc\Desktop\New folder (2)\BOL\bin\Debug\net5.0\BLL.pdb
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.AssemblyInfo.cs
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.csproj.CopyComplete
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.dll
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\ref\BOL.dll
+C:\Users\pc\Desktop\New folder (2)\BOL\obj\Debug\net5.0\BOL.pdb
